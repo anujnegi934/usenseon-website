@@ -43,7 +43,7 @@ function Founder() {
                     {/* Right — Content */}
                     <div className="w-full md:w-3/5">
                         <h3 className="text-sm md:text-base font-semibold uppercase tracking-widest text-blue-500 mb-6">
-                            A vision for smarter healthcare.
+                            A visionary for smarter healthcare.
                         </h3>
 
                         <div className="space-y-6">
