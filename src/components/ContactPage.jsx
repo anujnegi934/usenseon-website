@@ -29,7 +29,7 @@ function ContactPage() {
         
         // --- Web3Forms Configuration ---
         // Get your free access key from https://web3forms.com/ and paste it below
-        formDataObj.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formDataObj.append("access_key", "b446a5a9-102a-4456-8c3e-2ae2dc2be981");
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
