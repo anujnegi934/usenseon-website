@@ -3,9 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Founder from "./components/Founder";
-import LogoCloud from "./components/LogoCloud";
 import Benefits from "./components/Benefits";
-import Testimonials from "./components/Testimonials";
 import Team from "./components/Team";
 import Partners from "./components/Partners";
 import Contact from "./components/Contact";
@@ -19,9 +17,7 @@ function HomePage() {
       <Hero />
       <About />
       <Founder />
-      <LogoCloud />
       <Benefits />
-      <Testimonials />
       <Team />
       <Partners />
       <Contact />
