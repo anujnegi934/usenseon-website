@@ -29,7 +29,7 @@ function Hero() {
                 </h1>
 
                 <p className="mt-6 md:mt-8 text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed animate-fade-in-delay-2 font-medium">
-                    A visionary for a smarter healthcare, delivering next-generation solutions powered by AI, IoT & sensor intelligence.
+                    Smarter IV monitoring for safer patient outcomes — powered by precision sensors and real-time intelligence.
                 </p>
 
                 {/* CTA Button */}

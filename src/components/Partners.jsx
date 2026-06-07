@@ -70,7 +70,11 @@ function Partners() {
                                 <img
                                     src={p.logo}
                                     alt={p.name}
-                                    className="max-h-[80px] md:max-h-[100px] w-full object-contain mix-blend-multiply"
+                                    className={`max-h-[80px] md:max-h-[100px] w-full object-contain mix-blend-multiply ${
+                                        p.name === "AWS" ? "scale-75" : 
+                                        ["Quality Solution India", "CommonBee"].includes(p.name) ? "scale-[1.4]" : 
+                                        ["Graphic Era University", "Plastipack", "MeitY Startup Hub"].includes(p.name) ? "scale-125" : ""
+                                    }`}
                                 />
                             </div>
                             <span className="text-xs font-medium text-gray-400 text-center leading-tight mt-4">
