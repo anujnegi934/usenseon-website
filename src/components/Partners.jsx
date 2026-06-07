@@ -72,8 +72,10 @@ function Partners() {
                                     alt={p.name}
                                     className={`max-h-[80px] md:max-h-[100px] w-full object-contain mix-blend-multiply ${
                                         p.name === "AWS" ? "scale-75" : 
-                                        ["Quality Solution India", "CommonBee"].includes(p.name) ? "scale-[1.4]" : 
-                                        ["Graphic Era University", "Plastipack", "MeitY Startup Hub"].includes(p.name) ? "scale-125" : ""
+                                        p.name === "Quality Solution India" ? "scale-[1.4]" : 
+                                        p.name === "CommonBee" ? "scale-110 md:scale-[1.4]" :
+                                        p.name === "Graphic Era University" ? "scale-110 md:scale-125" :
+                                        ["Plastipack", "MeitY Startup Hub"].includes(p.name) ? "scale-125" : ""
                                     }`}
                                 />
                             </div>
