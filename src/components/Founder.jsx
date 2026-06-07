@@ -26,7 +26,7 @@ function Founder() {
         >
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-10 text-center md:text-left ml-2">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-10 text-center md:text-left ml-2">
                     Founder
                 </h2>
 

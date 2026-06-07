@@ -8,7 +8,6 @@ import Team from "./components/Team";
 import Partners from "./components/Partners";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ContactPage from "./components/ContactPage";
 
 function HomePage() {
   return (
@@ -30,7 +29,6 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/contact" element={<ContactPage />} />
     </Routes>
   );
 }

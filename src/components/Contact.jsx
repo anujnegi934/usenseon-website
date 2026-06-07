@@ -27,7 +27,7 @@ function Contact() {
         >
             <div className={`max-w-3xl mx-auto text-center px-6 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-2">
                     Contact Us
                 </h2>
 
@@ -41,12 +41,12 @@ function Contact() {
 
                 {/* CTA Button */}
                 <div className="mb-12">
-                    <Link
-                        to="/contact"
+                    <a
+                        href="mailto:contact@usenseonlabs.com"
                         className="bg-gray-900 text-white text-sm font-medium px-8 py-3.5 rounded-full hover:bg-blue-600 transition-colors duration-200 inline-block"
                     >
                         Contact Us →
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Contact Info */}

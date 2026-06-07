@@ -32,9 +32,9 @@ function Navbar() {
                     <a href="#founder" className="text-sm font-medium text-gray-500 hover:text-blue-500 transition-colors duration-200">
                         Founder
                     </a>
-                    <Link to="/contact" className="text-sm font-medium text-gray-500 hover:text-blue-500 transition-colors duration-200">
+                    <a href="mailto:contact@usenseonlabs.com" className="text-sm font-medium text-gray-500 hover:text-blue-500 transition-colors duration-200">
                         Contact
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Mobile Hamburger */}
@@ -57,7 +57,7 @@ function Navbar() {
                     <a href="#awards" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Awards</a>
                     <a href="#team" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Team</a>
                     <a href="#founder" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Founder</a>
-                    <Link to="/contact" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Contact</Link>
+                    <a href="mailto:contact@usenseonlabs.com" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Contact</a>
                 </div>
             )}
         </header>

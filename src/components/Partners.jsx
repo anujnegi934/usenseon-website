@@ -49,7 +49,7 @@ function Partners() {
         >
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 text-center mb-14">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-black text-center mb-14">
                     Trusted and Supported by
                 </h2>
 

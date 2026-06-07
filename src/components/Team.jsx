@@ -47,7 +47,7 @@ function Team() {
         >
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-2">
                     Our Team
                 </h2>
 

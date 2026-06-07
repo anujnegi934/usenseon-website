@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Hero() {
     return (
-        <section className="relative w-full overflow-hidden max-w-7xl mx-auto px-6 md:px-8 pt-12 md:pt-20 pb-20 md:pb-28">
+        <section className="relative w-full overflow-hidden max-w-7xl mx-auto px-6 md:px-8 pt-12 md:pt-20 pb-20 md:pb-28 min-h-[calc(100vh-70px)] flex flex-col justify-center">
 
             {/* Ambient Animated Background */}
             <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
@@ -18,7 +18,7 @@ function Hero() {
                     font-bold
                     tracking-tighter
                     max-w-5xl
-                    text-gray-900
+                    text-black
                     animate-fade-in-delay-1
                 ">
                     Revolutionizing healthcare,
@@ -29,18 +29,18 @@ function Hero() {
                 </h1>
 
                 <p className="mt-6 md:mt-8 text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed animate-fade-in-delay-2 font-medium">
-                    Next-Generation Healthcare Solutions Powered by AI, IoT & Sensor Intelligence
+                    A visionary for a smarter healthcare, delivering next-generation solutions powered by AI, IoT & sensor intelligence.
                 </p>
 
                 {/* CTA Button */}
                 <div className="mt-10 animate-fade-in-delay-3">
-                    <Link
-                        to="/contact"
+                    <a
+                        href="mailto:contact@usenseonlabs.com"
                         className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-gray-900 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-800 hover:shadow-xl hover:-translate-y-0.5"
                     >
                         <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 opacity-20 group-hover:opacity-60 transition duration-200 blur-sm"></div>
                         <span className="relative">Get in Touch →</span>
-                    </Link>
+                    </a>
                 </div>
             </div>
 
