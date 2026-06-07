@@ -8,19 +8,19 @@ import maklaw from "../assets/maklaw.png";
 import commonbee from "../assets/commonbee.png";
 import kobaat from "../assets/kobaat.png";
 import plastipack from "../assets/plastipack.png";
-import aws from "../assets/aws.webp";
+import aws from "../assets/aws.svg";
 
 const partners = [
-    { name: "Graphic Era University", logo: graphic, className: "h-20 md:h-24 max-w-full object-contain" },
+    { name: "Graphic Era University", logo: graphic },
     { name: "Runway Incubator", logo: runway },
-    { name: "MeitY Startup Hub", logo: meity, className: "h-20 md:h-24 max-w-full object-contain" },
+    { name: "MeitY Startup Hub", logo: meity },
     { name: "Startup Uttarakhand", logo: startup },
-    { name: "Quality Solution India", logo: quality, className: "h-20 md:h-24 max-w-full object-contain" },
+    { name: "Quality Solution India", logo: quality },
     { name: "MAK LAW", logo: maklaw },
     { name: "CommonBee", logo: commonbee },
     { name: "KoBaatNi", logo: kobaat },
-    { name: "Plastipack", logo: plastipack, className: "h-20 md:h-24 max-w-full object-contain" },
-    { name: "AWS", logo: aws, className: "h-20 md:h-24 max-w-full object-contain" },
+    { name: "Plastipack", logo: plastipack },
+    { name: "AWS", logo: aws },
 ];
 
 function Partners() {
@@ -53,25 +53,27 @@ function Partners() {
                     Trusted and Supported by
                 </h2>
 
-                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 place-items-center">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 place-items-center">
                     {partners.map((p, i) => (
                         <div
                             key={i}
                             className="
                                 bg-white border border-gray-100 rounded-2xl
-                                w-full p-6 md:p-8
-                                flex flex-col items-center justify-center gap-4
+                                w-full aspect-square p-5 md:p-6
+                                flex flex-col items-center justify-between
                                 hover:shadow-md hover:-translate-y-0.5 hover:border-gray-200
                                 transition-all duration-300
                                 cursor-default
                             "
                         >
-                            <img
-                                src={p.logo}
-                                alt={p.name}
-                                className={p.className || "h-14 md:h-16 max-w-full object-contain"}
-                            />
-                            <span className="text-xs font-medium text-gray-400 text-center leading-tight">
+                            <div className="flex-1 w-full flex items-center justify-center overflow-hidden">
+                                <img
+                                    src={p.logo}
+                                    alt={p.name}
+                                    className="max-h-[80px] md:max-h-[100px] w-full object-contain mix-blend-multiply"
+                                />
+                            </div>
+                            <span className="text-xs font-medium text-gray-400 text-center leading-tight mt-4">
                                 {p.name}
                             </span>
                         </div>

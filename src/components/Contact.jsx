@@ -27,13 +27,13 @@ function Contact() {
         >
             <div className={`max-w-3xl mx-auto text-center px-6 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <p className="text-xs font-medium uppercase tracking-widest text-blue-500 mb-4">
-                    Get in Touch
-                </p>
-
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 mb-5">
-                    Get in Touch
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+                    Contact Us
                 </h2>
+
+                <h3 className="text-sm md:text-base font-semibold uppercase tracking-widest text-blue-500 mb-8">
+                    Get in Touch
+                </h3>
 
                 <p className="text-gray-500 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
                     Whether you're a healthcare professional, researcher, investor, industry partner, or technology enthusiast, we'd be happy to connect and share more about our work at Usenseon Labs.

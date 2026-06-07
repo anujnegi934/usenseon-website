@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-    { value: "2025", label: "Founded" },
+    { value: "2025", label: "Founded in" },
     { value: "2", label: "Patents Filed" },
     { value: "3", label: "Awards Won" },
+    { value: "2", label: "Grants Received" },
 ];
 
 function About() {
@@ -32,19 +33,17 @@ function About() {
         >
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <p className="text-xs font-medium uppercase tracking-widest text-blue-500 mb-4">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-10">
                     About Us
-                </p>
+                </h2>
 
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
 
                     {/* Left — Mission */}
                     <div className="lg:w-3/5">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 leading-tight mb-6">
-                            Building the future of
-                            <br />
-                            <span className="text-blue-500">patient safety.</span>
-                        </h2>
+                        <h3 className="text-sm md:text-base font-semibold uppercase tracking-widest text-blue-500 mb-6">
+                            Building the future of patient safety.
+                        </h3>
 
                         <div className="space-y-6">
                             <p className="text-gray-500 text-base md:text-lg leading-relaxed">
@@ -67,7 +66,6 @@ function About() {
                                         bg-white border border-gray-100 rounded-3xl p-8
                                         hover:shadow-xl hover:-translate-y-1 hover:border-blue-100
                                         transition-all duration-300 flex flex-col justify-center items-center text-center
-                                        ${i === 2 ? 'sm:col-span-2' : ''}
                                         ${visible ? "animate-fade-in" : "opacity-0"}
                                     `}
                                     style={{ animationDelay: `${0.2 + i * 0.1}s` }}

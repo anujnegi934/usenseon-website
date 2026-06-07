@@ -47,13 +47,13 @@ function Team() {
         >
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <p className="text-xs font-medium uppercase tracking-widest text-blue-500 mb-4">
-                    The People Behind
-                </p>
-
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 mb-14">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
                     Our Team
                 </h2>
+
+                <h3 className="text-sm md:text-base font-semibold uppercase tracking-widest text-blue-500 mb-14">
+                    The People Behind
+                </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                     {teamMembers.map((member, i) => (

@@ -73,12 +73,12 @@ function Benefits() {
                         </div>
 
                         <p className={`text-[10px] md:text-xs font-semibold uppercase tracking-[0.25em] text-blue-500 mb-6 transition-all duration-700 delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                            Our Product
+                            Our Products
                         </p>
 
                         {/* Coming Soon — shimmer */}
                         <h2
-                            className={`text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-5 transition-all duration-700 delay-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                            className={`text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight pb-2 mb-5 transition-all duration-700 delay-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
                             style={{
                                 background: "linear-gradient(90deg, #e2e8f0, #94a3b8, #3b82f6, #94a3b8, #e2e8f0)",
                                 backgroundSize: "200% 100%",
@@ -94,8 +94,8 @@ function Benefits() {
                         {/* Subtle line */}
                         <div className={`w-10 h-px bg-gray-300 mb-5 transition-all duration-1000 delay-[900ms] ${visible ? "opacity-100 w-10" : "opacity-0 w-0"}`} />
 
-                        <p className={`text-sm text-gray-400 font-medium tracking-wide transition-all duration-700 delay-[1000ms] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                            Something exciting is in the works.
+                        <p className={`text-sm md:text-base text-gray-400 font-medium tracking-wide max-w-2xl mx-auto transition-all duration-700 delay-[1000ms] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+                            Discover the innovative healthcare technologies being developed by Usenseon Labs to improve patient safety, monitoring, and clinical efficiency.
                         </p>
 
                     </div>

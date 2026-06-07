@@ -26,9 +26,9 @@ function Founder() {
         >
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <p className="text-xs font-medium uppercase tracking-widest text-blue-500 mb-6 text-center md:text-left ml-2">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-10 text-center md:text-left ml-2">
                     Founder
-                </p>
+                </h2>
 
                 <div className="bg-white border border-gray-100 rounded-3xl shadow-sm p-8 md:p-12 lg:p-16 flex flex-col md:flex-row gap-12 lg:gap-16 items-center hover:shadow-md transition-shadow duration-300">
 
@@ -42,10 +42,9 @@ function Founder() {
 
                     {/* Right — Content */}
                     <div className="w-full md:w-3/5">
-                        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 leading-tight mb-8">
-                            A vision for <br className="hidden lg:block"/>
-                            <span className="text-blue-500">smarter healthcare.</span>
-                        </h2>
+                        <h3 className="text-sm md:text-base font-semibold uppercase tracking-widest text-blue-500 mb-6">
+                            A vision for smarter healthcare.
+                        </h3>
 
                         <div className="space-y-6">
                             <p className="text-gray-500 text-base md:text-lg leading-relaxed">
