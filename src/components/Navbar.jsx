@@ -23,7 +23,7 @@ function Navbar() {
                     <a href="#about" className="text-sm font-medium text-gray-500 hover:text-blue-500 transition-colors duration-200">
                         About Us
                     </a>
-                    <a href="#awards" className="text-sm font-medium text-gray-500 hover:text-blue-500 transition-colors duration-200">
+                    <a href="#about" className="text-sm font-medium text-gray-500 hover:text-blue-500 transition-colors duration-200">
                         Awards
                     </a>
                     <a href="#team" className="text-sm font-medium text-gray-500 hover:text-blue-500 transition-colors duration-200">
@@ -54,7 +54,7 @@ function Navbar() {
             {menuOpen && (
                 <div className="md:hidden border-t border-gray-100 bg-white px-6 pb-6 pt-4 space-y-4 animate-fade-in shadow-sm">
                     <a href="#about" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">About Us</a>
-                    <a href="#awards" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Awards</a>
+                    <a href="#about" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Awards</a>
                     <a href="#team" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Team</a>
                     <a href="#founder" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Founder</a>
                     <a href="mailto:contact@usenseonlabs.com" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Contact</a>
