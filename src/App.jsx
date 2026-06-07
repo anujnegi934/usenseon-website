@@ -15,11 +15,11 @@ function HomePage() {
     <>
       <Navbar />
       <Hero />
+      <Partners />
       <About />
       <Founder />
-      <Benefits />
       <Team />
-      <Partners />
+      <Benefits />
       <Contact />
       <Footer />
     </>

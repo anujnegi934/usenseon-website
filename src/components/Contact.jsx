@@ -32,15 +32,11 @@ function Contact() {
                 </p>
 
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 mb-5">
-                    Ready to transform
-                    <br />
-                    <span className="text-blue-500">patient care?</span>
+                    Get in Touch
                 </h2>
 
                 <p className="text-gray-500 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-                    Schedule a quick call to learn how Usenseon Labs
-                    can support your healthcare innovation journey.
-                    We'd love to hear from you.
+                    Whether you're a healthcare professional, researcher, investor, industry partner, or technology enthusiast, we'd be happy to connect and share more about our work at Usenseon Labs.
                 </p>
 
                 {/* CTA Button */}

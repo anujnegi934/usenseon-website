@@ -8,17 +8,19 @@ import maklaw from "../assets/maklaw.png";
 import commonbee from "../assets/commonbee.png";
 import kobaat from "../assets/kobaat.png";
 import plastipack from "../assets/plastipack.png";
+import aws from "../assets/aws.webp";
 
 const partners = [
-    { name: "Graphic Era University", logo: graphic },
+    { name: "Graphic Era University", logo: graphic, className: "h-20 md:h-24 max-w-full object-contain" },
     { name: "Runway Incubator", logo: runway },
-    { name: "MeitY Startup Hub", logo: meity },
+    { name: "MeitY Startup Hub", logo: meity, className: "h-20 md:h-24 max-w-full object-contain" },
     { name: "Startup Uttarakhand", logo: startup },
-    { name: "Quality Solution India", logo: quality },
+    { name: "Quality Solution India", logo: quality, className: "h-20 md:h-24 max-w-full object-contain" },
     { name: "MAK LAW", logo: maklaw },
     { name: "CommonBee", logo: commonbee },
     { name: "KoBaatNi", logo: kobaat },
-    { name: "Plastipack", logo: plastipack },
+    { name: "Plastipack", logo: plastipack, className: "h-20 md:h-24 max-w-full object-contain" },
+    { name: "AWS", logo: aws, className: "h-20 md:h-24 max-w-full object-contain" },
 ];
 
 function Partners() {
@@ -67,7 +69,7 @@ function Partners() {
                             <img
                                 src={p.logo}
                                 alt={p.name}
-                                className="h-14 md:h-16 max-w-full object-contain"
+                                className={p.className || "h-14 md:h-16 max-w-full object-contain"}
                             />
                             <span className="text-xs font-medium text-gray-400 text-center leading-tight">
                                 {p.name}

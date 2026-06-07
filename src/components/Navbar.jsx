@@ -30,7 +30,7 @@ function Navbar() {
                         Team
                     </a>
                     <a href="#founder" className="text-sm font-medium text-gray-500 hover:text-blue-500 transition-colors duration-200">
-                        Our Founder
+                        Founder
                     </a>
                     <Link to="/contact" className="text-sm font-medium text-gray-500 hover:text-blue-500 transition-colors duration-200">
                         Contact
@@ -56,7 +56,7 @@ function Navbar() {
                     <a href="#about" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">About Us</a>
                     <a href="#awards" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Awards</a>
                     <a href="#team" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Team</a>
-                    <a href="#founder" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Our Founder</a>
+                    <a href="#founder" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Founder</a>
                     <Link to="/contact" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-500 transition">Contact</Link>
                 </div>
             )}

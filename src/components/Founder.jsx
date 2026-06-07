@@ -27,7 +27,7 @@ function Founder() {
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
                 <p className="text-xs font-medium uppercase tracking-widest text-blue-500 mb-6 text-center md:text-left ml-2">
-                    Our Founder
+                    Founder
                 </p>
 
                 <div className="bg-white border border-gray-100 rounded-3xl shadow-sm p-8 md:p-12 lg:p-16 flex flex-col md:flex-row gap-12 lg:gap-16 items-center hover:shadow-md transition-shadow duration-300">
