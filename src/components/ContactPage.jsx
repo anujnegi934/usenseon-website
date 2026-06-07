@@ -1,58 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import usenseon from "../assets/usenseon.jpeg";
 
 function ContactPage() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        subject: "",
-        message: "",
-    });
-    const [submitted, setSubmitted] = useState(false);
-
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitError, setSubmitError] = useState("");
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitError("");
-
-        const formDataObj = new FormData(e.target);
-        
-        // --- Web3Forms Configuration ---
-        // Get your free access key from https://web3forms.com/ and paste it below
-        formDataObj.append("access_key", "b446a5a9-102a-4456-8c3e-2ae2dc2be981");
-
-        try {
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formDataObj
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                setSubmitted(true);
-                setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
-            } else {
-                setSubmitError("Something went wrong. Please try again.");
-                console.error("Form error:", data);
-            }
-        } catch (error) {
-            setSubmitError("Network error. Please check your connection.");
-            console.error("Fetch error:", error);
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
 
     return (
         <div className="min-h-screen bg-[#FAFAFA]">
@@ -145,144 +94,28 @@ function ContactPage() {
 
                         <div className="bg-white border border-gray-100 rounded-2xl p-8 md:p-10">
 
-                            {!submitted ? (
-                                <>
-                                    <h2 className="text-lg font-semibold text-gray-900 mb-6">
-                                        Send us a message
-                                    </h2>
-
-                                    <form onSubmit={handleSubmit} className="space-y-5">
-
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                            <div>
-                                                <label className="block text-xs font-medium text-gray-500 mb-2 uppercase tracking-wider">
-                                                    Your Name *
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    name="name"
-                                                    required
-                                                    value={formData.name}
-                                                    onChange={handleChange}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-50 transition-all"
-                                                    placeholder="John Doe"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label className="block text-xs font-medium text-gray-500 mb-2 uppercase tracking-wider">
-                                                    Your Email *
-                                                </label>
-                                                <input
-                                                    type="email"
-                                                    name="email"
-                                                    required
-                                                    value={formData.email}
-                                                    onChange={handleChange}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-50 transition-all"
-                                                    placeholder="john@example.com"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                            <div>
-                                                <label className="block text-xs font-medium text-gray-500 mb-2 uppercase tracking-wider">
-                                                    Phone Number
-                                                </label>
-                                                <input
-                                                    type="tel"
-                                                    name="phone"
-                                                    value={formData.phone}
-                                                    onChange={handleChange}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-50 transition-all"
-                                                    placeholder="+91 98765 43210"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label className="block text-xs font-medium text-gray-500 mb-2 uppercase tracking-wider">
-                                                    Company / Organization
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    name="company"
-                                                    value={formData.company}
-                                                    onChange={handleChange}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-50 transition-all"
-                                                    placeholder="Your organization"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <label className="block text-xs font-medium text-gray-500 mb-2 uppercase tracking-wider">
-                                                Subject *
-                                            </label>
-                                            <select
-                                                name="subject"
-                                                required
-                                                value={formData.subject}
-                                                onChange={handleChange}
-                                                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-50 transition-all bg-white appearance-none"
-                                            >
-                                                <option value="">Select a topic</option>
-                                                <option value="demo">Request a Demo</option>
-                                                <option value="partnership">Partnership Inquiry</option>
-                                                <option value="investment">Investment Inquiry</option>
-                                                <option value="general">General Inquiry</option>
-                                                <option value="support">Technical Support</option>
-                                            </select>
-                                        </div>
-
-                                        <div>
-                                            <label className="block text-xs font-medium text-gray-500 mb-2 uppercase tracking-wider">
-                                                Message *
-                                            </label>
-                                            <textarea
-                                                name="message"
-                                                required
-                                                rows="5"
-                                                value={formData.message}
-                                                onChange={handleChange}
-                                                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-50 transition-all resize-none"
-                                                placeholder="Tell us about your needs..."
-                                            />
-                                        </div>
-
-                                            <button
-                                                type="submit"
-                                                disabled={isSubmitting}
-                                                className={`w-full bg-gray-900 text-white text-sm font-medium py-3.5 rounded-full transition-colors duration-200 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-blue-600'}`}
-                                            >
-                                                {isSubmitting ? "Sending..." : "Send Message →"}
-                                            </button>
-
-                                            {submitError && (
-                                                <p className="text-red-500 text-sm text-center mt-3">{submitError}</p>
-                                            )}
-
-                                    </form>
-                                </>
-                            ) : (
-                                <div className="text-center py-16">
-                                    <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-5">
-                                        <svg className="w-7 h-7 text-green-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                                        Message Sent
-                                    </h3>
-                                    <p className="text-sm text-gray-500 mb-6">
-                                        Thank you for reaching out. We'll get back to you within 24 hours.
-                                    </p>
-                                    <button
-                                        onClick={() => { setSubmitted(false); setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" }); }}
-                                        className="text-sm text-blue-500 font-medium hover:underline"
-                                    >
-                                        Send another message
-                                    </button>
+                            <div className="flex flex-col items-center justify-center text-center h-full min-h-[300px] py-10">
+                                <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                                    <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                    </svg>
                                 </div>
-                            )}
+
+                                <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+                                    Send us an Email
+                                </h2>
+
+                                <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8 max-w-md">
+                                    We prefer direct communication. Click the button below to open your email client and message us directly.
+                                </p>
+
+                                <a
+                                    href="mailto:contact@usenseonlabs.com"
+                                    className="bg-gray-900 text-white text-sm font-medium px-8 py-3.5 rounded-full hover:bg-blue-600 transition-colors duration-200 inline-block shadow-sm"
+                                >
+                                    contact@usenseonlabs.com →
+                                </a>
+                            </div>
 
                         </div>
 
