@@ -17,7 +17,7 @@ const partners = [
     { name: "Startup Uttarakhand", logo: startup },
     { name: "Quality Solution India", logo: quality },
     { name: "MAK LAW", logo: maklaw },
-    { name: "CommonBee", logo: commonbee },
+    { name: "CommonBee Technologies", logo: commonbee },
     { name: "KoBaatNi", logo: kobaat },
     { name: "Plastipack", logo: plastipack },
     { name: "AWS", logo: aws },
@@ -73,7 +73,7 @@ function Partners() {
                                     className={`max-h-[80px] md:max-h-[100px] w-full object-contain mix-blend-multiply ${
                                         p.name === "AWS" ? "scale-75" : 
                                         p.name === "Quality Solution India" ? "scale-[1.4]" : 
-                                        p.name === "CommonBee" ? "scale-110 md:scale-[1.4]" :
+                                        p.name === "CommonBee Technologies" ? "scale-110 md:scale-[1.4]" :
                                         p.name === "Graphic Era University" ? "scale-110 md:scale-125" :
                                         ["Plastipack", "MeitY Startup Hub"].includes(p.name) ? "scale-125" : ""
                                     }`}
