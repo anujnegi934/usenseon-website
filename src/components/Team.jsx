@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import ctoImage from "../assets/sanjeet_maity.jpg";
+import ishaanImage from "../assets/ishaan_narang.jpg";
 
 const teamMembers = [
     {
@@ -8,16 +10,20 @@ const teamMembers = [
         description: "Driving the vision for smarter healthcare monitoring. Passionate about building technology that saves lives.",
     },
     {
-        name: "Member Two",
+        name: "Sanjeet Maity",
         role: "CTO",
-        initials: "M2",
-        description: "Leading engineering and product development. Expertise in embedded systems, IoT architecture and sensor design.",
+        initials: "SM",
+        image: ctoImage,
+        imageClass: "object-center group-hover:scale-105",
+        description: "As CTO, Sanjeet Maity leads hardware engineering, leveraging expertise in transport systems, product development, and EV charging technologies to drive innovation.",
     },
     {
-        name: "Member Three",
-        role: "Design & Strategy Lead",
-        initials: "M3",
-        description: "Shaping the user experience and go-to-market strategy. Focused on making complex technology feel simple.",
+        name: "Dr. Ishaan Narang",
+        role: "Angel Investor",
+        initials: "IN",
+        image: ishaanImage,
+        imageClass: "object-top scale-105 group-hover:scale-110",
+        description: "Assistant Director at QSI India Pvt. Ltd., serves as an Angel Investor, providing strategic guidance, industry insights, and support for our growth journey.",
     },
 ];
 
@@ -59,23 +65,36 @@ function Team() {
                     {teamMembers.map((member, i) => (
                         <div
                             key={i}
-                            className="bg-white/80 backdrop-blur-sm border border-gray-100 rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 hover:border-blue-100 transition-all duration-300 group"
+                            className="bg-white/80 backdrop-blur-sm border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:border-blue-100 transition-all duration-300 group flex flex-col"
                         >
-                            {/* Avatar */}
-                            <div className="w-16 h-16 bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-100 rounded-2xl flex items-center justify-center text-sm font-bold text-gray-400 mb-6 group-hover:from-blue-50 group-hover:to-cyan-50 group-hover:text-blue-600 transition-all duration-300 shadow-sm">
-                                {member.initials}
+                            {/* Large Image Header */}
+                            <div className="w-full aspect-square bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center text-3xl font-bold text-gray-300 relative overflow-hidden border-b border-gray-100">
+                                {member.image ? (
+                                    <img 
+                                        src={member.image} 
+                                        alt={member.name} 
+                                        className={`w-full h-full object-cover transition-transform duration-500 ${member.imageClass || "object-center group-hover:scale-105"}`} 
+                                    />
+                                ) : (
+                                    <span className="transition-transform duration-500 group-hover:scale-110 group-hover:text-blue-200">
+                                        {member.initials}
+                                    </span>
+                                )}
+                                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                             </div>
 
                             {/* Info */}
-                            <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                                {member.name}
-                            </h3>
-                            <p className="text-blue-500 text-sm font-medium mb-4">
-                                {member.role}
-                            </p>
-                            <p className="text-gray-400 text-sm leading-relaxed">
-                                {member.description}
-                            </p>
+                            <div className="p-8 flex flex-col flex-grow">
+                                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                                    {member.name}
+                                </h3>
+                                <p className="text-blue-500 text-sm font-semibold uppercase tracking-wider mb-4">
+                                    {member.role}
+                                </p>
+                                <p className="text-gray-500 text-sm leading-relaxed flex-grow">
+                                    {member.description}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>
