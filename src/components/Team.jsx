@@ -61,7 +61,7 @@ function Team() {
                     The People Behind
                 </h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
                     {teamMembers.map((member, i) => (
                         <div
                             key={i}
@@ -84,14 +84,14 @@ function Team() {
                             </div>
 
                             {/* Info */}
-                            <div className="p-8 flex flex-col flex-grow">
-                                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                            <div className="p-5 md:p-6 flex flex-col flex-grow">
+                                <h3 className="text-lg font-bold text-gray-900 mb-1">
                                     {member.name}
                                 </h3>
-                                <p className="text-blue-500 text-sm font-semibold uppercase tracking-wider mb-4">
+                                <p className="text-blue-500 text-xs font-semibold uppercase tracking-wider mb-3">
                                     {member.role}
                                 </p>
-                                <p className="text-gray-500 text-sm leading-relaxed flex-grow">
+                                <p className="text-gray-500 text-xs md:text-sm leading-relaxed flex-grow">
                                     {member.description}
                                 </p>
                             </div>
