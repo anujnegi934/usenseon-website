@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import founderImage from "../assets/rangan_raj_ghosh.jpg";
 
 function Founder() {
     const sectionRef = useRef(null);
@@ -34,9 +35,12 @@ function Founder() {
 
                     {/* Left — Image Placeholder */}
                     <div className="w-full md:w-2/5">
-                        <div className="aspect-[4/5] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl flex items-center justify-center text-sm font-medium text-gray-400 border border-gray-100 overflow-hidden relative group shadow-sm">
-                            <span className="relative z-10 transition-transform duration-500 group-hover:scale-105">Founder Image</span>
-                            <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="aspect-[4/5] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl flex items-center justify-center border border-gray-100 overflow-hidden relative group shadow-sm">
+                            <img 
+                                src={founderImage} 
+                                alt="Rangan Raj Ghosh" 
+                                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" 
+                            />
                         </div>
                     </div>
 
