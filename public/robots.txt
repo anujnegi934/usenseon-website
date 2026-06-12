@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://usenseonlabs.com/sitemap.xml
+Sitemap: https://www.usenseonlabs.com/sitemap.xml
