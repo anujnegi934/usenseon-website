@@ -24,6 +24,7 @@ function Contact() {
             id="contact"
             ref={ref}
             className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50"
+            style={{ scrollMarginTop: '80px' }}
         >
             <div className={`max-w-3xl mx-auto text-center px-6 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 

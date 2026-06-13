@@ -29,13 +29,14 @@ function Hero() {
                 </h1>
 
                 <p className="mt-6 md:mt-8 text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed animate-fade-in-delay-2 font-medium">
-                    Smarter IV monitoring for safer patient outcomes — powered by precision sensors and real-time intelligence.
+                    Powered by precision sensors and real-time intelligence.
                 </p>
 
                 {/* CTA Button */}
                 <div className="mt-10 animate-fade-in-delay-3">
                     <a
-                        href="mailto:contact@usenseonlabs.com"
+                        href="#contact"
+                        onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
                         className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-gray-900 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-800 hover:shadow-xl hover:-translate-y-0.5"
                     >
                         <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 opacity-20 group-hover:opacity-60 transition duration-200 blur-sm"></div>

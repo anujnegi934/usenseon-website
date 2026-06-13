@@ -25,8 +25,8 @@ function TeamCard({ member }) {
     const [expanded, setExpanded] = useState(false);
 
     return (
-        <div className="bg-white/80 backdrop-blur-sm border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
-            {/* Image — shorter 4:3 aspect ratio */}
+        <div className="bg-white/80 backdrop-blur-sm border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
+            {/* Image */}
             <div className="w-full aspect-square bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden border-b border-gray-100">
                 {member.image ? (
                     <img
@@ -44,23 +44,23 @@ function TeamCard({ member }) {
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
                 {/* Role badge on image */}
-                <span className="absolute bottom-4 left-5 bg-white/90 backdrop-blur-sm text-blue-600 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-sm">
+                <span className="absolute bottom-3 left-4 bg-white/90 backdrop-blur-sm text-blue-600 text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
                     {member.role}
                 </span>
             </div>
 
             {/* Info */}
-            <div className="p-6 md:p-7">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
+            <div className="p-4 md:p-5">
+                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">
                     {member.name}
                 </h3>
                 <div className="relative">
-                    <p className={`text-gray-500 text-sm leading-relaxed transition-all duration-300 ${expanded ? "" : "line-clamp-3"}`}>
+                    <p className={`text-gray-500 text-xs leading-relaxed transition-all duration-300 ${expanded ? "" : "line-clamp-2"}`}>
                         {member.description}
                     </p>
                     <button
                         onClick={() => setExpanded(!expanded)}
-                        className="mt-3 text-blue-500 hover:text-blue-600 text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+                        className="mt-2 text-blue-500 hover:text-blue-600 text-xs font-medium transition-colors duration-200 flex items-center gap-1"
                     >
                         {expanded ? "Read less" : "Read more"}
                         <svg
@@ -98,19 +98,20 @@ function Team() {
         <section
             id="team"
             ref={ref}
-            className="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-24"
+            className="max-w-7xl mx-auto px-6 md:px-8 pt-2 pb-12 md:pb-16 min-h-[calc(100vh-70px)] flex flex-col justify-center"
+            style={{ scrollMarginTop: '16px' }}
         >
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-2">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-black mb-1">
                     Our Team
                 </h2>
 
-                <h3 className="text-sm md:text-base font-semibold uppercase tracking-widest text-blue-500 mb-14">
+                <h3 className="text-xs md:text-sm font-semibold uppercase tracking-widest text-blue-500 mb-6">
                     The People Behind
                 </h3>
 
-                <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+                <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
                     {teamMembers.map((member, i) => (
                         <TeamCard key={i} member={member} />
                     ))}
