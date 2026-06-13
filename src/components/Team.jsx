@@ -50,8 +50,8 @@ function TeamCard({ member }) {
             </div>
 
             {/* Info */}
-            <div className="p-4 md:p-5">
-                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">
+            <div className="p-3 md:p-4">
+                <h3 className="text-sm md:text-base font-bold text-gray-900 mb-1">
                     {member.name}
                 </h3>
                 <div className="relative">
@@ -103,15 +103,15 @@ function Team() {
         >
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-black mb-1">
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-black mb-1">
                     Our Team
                 </h2>
 
-                <h3 className="text-xs md:text-sm font-semibold uppercase tracking-widest text-blue-500 mb-6">
+                <h3 className="text-xs md:text-sm font-semibold uppercase tracking-widest text-blue-500 mb-4">
                     The People Behind
                 </h3>
 
-                <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
+                <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-start">
                     {teamMembers.map((member, i) => (
                         <TeamCard key={i} member={member} />
                     ))}

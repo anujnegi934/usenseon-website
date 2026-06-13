@@ -28,15 +28,15 @@ function Founder() {
         >
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
 
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black mb-5 text-center md:text-left ml-2">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-black mb-3 text-center md:text-left ml-2">
                     Founder
                 </h2>
 
-                <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-6 md:p-8 lg:p-10 flex flex-col md:flex-row gap-8 lg:gap-10 items-center hover:shadow-md transition-shadow duration-300">
+                <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-5 md:p-6 lg:p-8 flex flex-col md:flex-row gap-6 lg:gap-8 items-center hover:shadow-md transition-shadow duration-300">
 
                     {/* Left — Image Placeholder */}
-                    <div className="w-full md:w-1/3">
-                        <div className="aspect-[3/4] bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl flex items-center justify-center border border-gray-100 overflow-hidden relative group shadow-sm">
+                    <div className="w-full md:w-1/4">
+                        <div className="aspect-[3/4] bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl flex items-center justify-center border border-gray-100 overflow-hidden relative group shadow-sm">
                             <img 
                                 src={founderImage} 
                                 alt="Rangan Raj Ghosh" 
@@ -46,13 +46,13 @@ function Founder() {
                     </div>
 
                     {/* Right — Content */}
-                    <div className="w-full md:w-2/3">
-                        <h3 className="text-sm md:text-base font-semibold uppercase tracking-widest text-blue-500 mb-4">
+                    <div className="w-full md:w-3/4">
+                        <h3 className="text-xs md:text-sm font-semibold uppercase tracking-widest text-blue-500 mb-3">
                             A visionary for smarter healthcare.
                         </h3>
 
-                        <div className="space-y-4">
-                            <p className="text-gray-500 text-base md:text-lg leading-relaxed">
+                        <div className="space-y-3">
+                            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
                                 Rangan Raj Ghosh is the Founder of Usenseon Labs and a B.Sc. Microbiology student at UPES, actively balancing his academic journey with building innovative technology solutions. A self-proclaimed technology enthusiast, he is passionate about exploring the intersection of healthcare and technology to address real-world challenges. His work brings together life sciences, embedded systems, connected sensing technologies, and cloud computing to develop practical, impact-driven innovations. Recognized for his commitment to sustainability and innovation, he received the Young Innovator Award in Sustainability from Graphic Era University. Through Usenseon Labs, Rangan is dedicated to transforming ideas into meaningful solutions that improve lives and contribute to a smarter, healthier future.
                             </p>
                         </div>
